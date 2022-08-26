@@ -2,6 +2,7 @@ import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 import GlobalStyle from '../styles/global';
 import Home from '../components/Home';
+import About from '../components/About';
 
 function IndexPage() {
   return (
@@ -9,6 +10,7 @@ function IndexPage() {
       <GlobalStyle />
 
       <Home />
+      <About />
     </main>
   );
 }

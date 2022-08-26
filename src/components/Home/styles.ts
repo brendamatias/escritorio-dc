@@ -20,7 +20,7 @@ export const Container = styled.header`
       margin: 0 auto;
 
       > h6 {
-        font-weight: 400;
+        font-weight: 600;
         font-size: 16px;
         line-height: 175%;
         letter-spacing: 0.4em;
