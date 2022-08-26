@@ -1,4 +1,5 @@
-import '@fontsource/roboto';
+import '@fontsource/open-sans';
+import '@fontsource/open-sans/600.css';
 
 import { createGlobalStyle } from 'styled-components';
 
@@ -19,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
   body, input, button {
-    font: 14px 'Roboto', sans-serif;
+    font: 14px 'Open Sans', sans-serif;
   }
   a {
     text-decoration: none;
@@ -32,6 +33,13 @@ const GlobalStyle = createGlobalStyle`
   }
   img {
     -webkit-user-draggit: none
+  }
+
+  .button {
+    color: #fff;
+    padding: 8px 32px;
+    background: #178cd7;
+    font-weight: 600;
   }
 `;
 
