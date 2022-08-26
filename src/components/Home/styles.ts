@@ -65,9 +65,15 @@ export const Header = styled.header`
     gap: 40px;
 
     > li {
-      text-transform: uppercase;
-      font-weight: 600;
-      color: #fff;
+      a {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fff;
+
+        &:hover {
+          color: #178cd7;
+        }
+      }
     }
   }
 `;

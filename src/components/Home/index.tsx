@@ -5,18 +5,31 @@ import logo from '../../images/logo.png';
 
 function Home() {
   return (
-    <Container>
+    <Container id="home">
       <div>
         <Header>
           <img src={logo} alt="DC Logo" />
           <ul>
-            <li>Início</li>
-            <li>Sobre</li>
-            <li>Serviços</li>
-            <li>Projetos</li>
+            <li>
+              <a href="#home">Início</a>
+            </li>
+            <li>
+              <a href="#about">Sobre</a>
+            </li>
+            <li>
+              <a href="#services">Serviços</a>
+            </li>
+            <li>
+              <a href="#projects">Projetos</a>
+            </li>
           </ul>
 
-          <a href="contact" className="button">
+          <a
+            href="https://api.whatsapp.com/send?phone=5581999462115&text="
+            className="button"
+            target="_blank"
+            rel="noreferrer"
+          >
             Contato
           </a>
         </Header>

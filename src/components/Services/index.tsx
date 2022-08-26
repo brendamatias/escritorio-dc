@@ -3,21 +3,35 @@ import { Container } from './styles';
 import aboutSrc from '../../images/about-image.jpg';
 
 function Services() {
-  const services = ['Engenharia', 'Regularização', 'Arquitetura'];
+  const services = [
+    {
+      label: 'Projetos',
+      description:
+        'Projetos Estruturais, Arquitetônicos, Elétricos e Hidráulicos e Projetos em BIM',
+    },
+    {
+      label: 'Reformas',
+      description:
+        ' Projetos Estruturais, Arquitetônicos, Elétricos e Hidráulicos e Projetos em BIM',
+    },
+    { label: 'Arquitetura', description: '' },
+  ];
 
   return (
-    <Container>
+    <Container id="services">
       <div className="title">
         <span>Serviços</span>
-        <h1>We're not only design building, but also</h1>
+        <h1>Você tem um sonho? Podemos torná-lo realidade!</h1>
       </div>
 
       <ul>
         {services.map((service) => (
-          <li key={service}>
-            <img src={aboutSrc} alt="Projeto 01" />
-            <strong>{service}</strong>
-            <p>Projetos Estruturais, Arquitetônicos, Elétricos e Hidráulicos</p>
+          <li key={service.label}>
+            <div>
+              <img src={aboutSrc} alt="Projeto 01" />
+              <strong>{service.label}</strong>
+              <p>{service.description}</p>
+            </div>
 
             <a href="teste" className="button">
               Saiba mais

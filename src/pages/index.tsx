@@ -6,6 +6,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import Services from '../components/Services';
 import Projects from '../components/Projects';
+import Footer from '../components/Footer';
 
 function IndexPage() {
   return (
@@ -17,6 +18,7 @@ function IndexPage() {
       <Contact />
       <Services />
       <Projects />
+      <Footer />
     </main>
   );
 }

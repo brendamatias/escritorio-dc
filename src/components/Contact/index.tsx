@@ -1,23 +1,22 @@
 import * as React from 'react';
 import { Container } from './styles';
-import contactSrc from '../../images/contact-image.png';
 
 function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <div>
         <span>Contato</span>
-        <h1>We're not only design building, but also</h1>
+        <h1>Projete sua casa do jeito que sempre quis</h1>
         <p>
-          We’re not only design building, but also We’re not only design
-          building, but alsoWe’re not only design building, but also
+          Nossa equipe somam conhecimentos nas áreas de arquitetura e engenheira
+          para executarmos da melhor forma projetos residências, comerciais,
+          projetos estruturais e muito mais, sempre priorizando o ato de
+          projetar com responsabilidade e criatividade.
         </p>
 
         <a href="teste" className="button">
           Contate
         </a>
-
-        {/* <img src={contactSrc} alt="Projeto 01" /> */}
       </div>
     </Container>
   );
