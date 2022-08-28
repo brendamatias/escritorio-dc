@@ -5,10 +5,14 @@ export const Container = styled.div`
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, 427px);
   align-items: center;
   gap: 80px;
-  padding: 120px 0;
+  padding: 120px 20px;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 
   > img {
     width: 100%;
@@ -34,6 +38,10 @@ export const Container = styled.div`
       line-height: 152.5%;
       color: #141414;
       margin-bottom: 20px;
+
+      @media screen and (max-width: 450px) {
+        font-size: 36px;
+      }
     }
 
     > p {
