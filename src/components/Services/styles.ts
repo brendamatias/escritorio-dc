@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 975px;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 120px 20px;
   border-bottom: 1px solid #f0f0f2;
 
   > img {
@@ -31,12 +31,16 @@ export const Container = styled.div`
       color: #141414;
       margin-bottom: 40px;
       max-width: 500px;
+
+      @media screen and (max-width: 450px) {
+        font-size: 36px;
+      }
     }
   }
 
   > ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, 271px);
     gap: 60px;
 
     > li {
@@ -46,8 +50,10 @@ export const Container = styled.div`
       align-items: flex-start;
 
       > div {
+        width: 100%;
+
         > img {
-          width: 285px;
+          width: 100%;
           height: 160px;
           object-fit: cover;
           object-position: center;
@@ -69,6 +75,23 @@ export const Container = styled.div`
           text-align: justify;
           line-height: 152.5%;
           margin-bottom: 80px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      grid-template-columns: 1fr;
+
+      > li {
+        > div {
+          > span {
+            font-size: 24px;
+          }
+
+          > p {
+            font-size: 14px;
+            margin-bottom: 40px;
+          }
         }
       }
     }
