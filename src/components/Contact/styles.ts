@@ -7,10 +7,19 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-position: bottom right;
 
+  @media screen and (max-width: 1750px) {
+    background-size: 60%;
+  }
+
+  @media screen and (max-width: 690px) {
+    background-size: 80%;
+  }
+
   > div {
     max-width: 975px;
-    padding: 120px 0;
+    padding: 120px 20px;
     margin: 0 auto;
+
     > span {
       display: block;
       margin-bottom: 24px;
@@ -31,6 +40,10 @@ export const Container = styled.div`
       color: #fff;
       margin-bottom: 20px;
       max-width: 500px;
+
+      @media screen and (max-width: 450px) {
+        font-size: 36px;
+      }
     }
 
     > p {
