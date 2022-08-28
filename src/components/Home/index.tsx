@@ -1,9 +1,12 @@
 import * as React from 'react';
+import { FaBars } from 'react-icons/fa';
 import { Container, Header } from './styles';
 
 import logo from '../../images/logo.png';
 
 function Home() {
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <Container id="home">
       <div>
@@ -24,6 +27,7 @@ function Home() {
             </li>
           </ul>
 
+          {/* <div className="" />
           <a
             href="https://api.whatsapp.com/send?phone=5581999462115&text="
             className="button"
@@ -31,7 +35,7 @@ function Home() {
             rel="noreferrer"
           >
             Contato
-          </a>
+          </a> */}
         </Header>
 
         <div className="content">

@@ -6,17 +6,27 @@ export const Container = styled.footer`
   > div:first-child {
     max-width: 975px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 80px 20px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     > img {
       width: 220px;
       height: 100%;
     }
 
+    @media screen and (max-width: 707px) {
+      gap: 60px;
+
+      > img {
+        margin: 0 auto;
+      }
+    }
+
     > div {
       display: flex;
+      flex-wrap: wrap;
       gap: 80px;
 
       > .links {
