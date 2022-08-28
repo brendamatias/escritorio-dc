@@ -18,6 +18,7 @@ export const Container = styled.header`
       height: calc(100% - 50px);
       max-width: 975px;
       margin: 0 auto;
+      padding: 0 20px;
 
       > h6 {
         font-weight: 600;
@@ -27,6 +28,10 @@ export const Container = styled.header`
         text-transform: uppercase;
         color: #178cd7;
         margin-bottom: 24px;
+
+        @media screen and (max-width: 450px) {
+          font-size: 14px;
+        }
       }
 
       > h1 {
@@ -36,6 +41,10 @@ export const Container = styled.header`
         text-transform: capitalize;
         color: #ffffff;
         max-width: 700px;
+
+        @media screen and (max-width: 450px) {
+          font-size: 60px;
+        }
       }
 
       > span {
@@ -58,6 +67,28 @@ export const Header = styled.header`
   justify-content: space-between;
   max-width: 975px;
   margin: 0 auto;
+  padding: 0 20px;
+
+  > button {
+    display: none;
+    border: 0;
+    background-color: transparent;
+    font-size: 24px;
+
+    > svg {
+      color: #fff;
+    }
+
+    @media screen and (max-width: 670px) {
+      display: block;
+    }
+  }
+`;
+
+export const Menu = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 40px;
 
   > ul {
     display: flex;
@@ -75,5 +106,46 @@ export const Header = styled.header`
         }
       }
     }
+  }
+
+  @media screen and (max-width: 670px) {
+    display: none;
+  }
+`;
+
+export const MenuMobile = styled.ul`
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  gap: 30px;
+  top: 100px;
+  right: 20px;
+  background-color: #fff;
+  padding: 30px 70px 30px 30px;
+  align-items: flex-start;
+  border-radius: 4px;
+
+  > li {
+    &:last-child {
+      margin-top: 30px;
+    }
+
+    a {
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.8);
+
+      &:hover {
+        color: #178cd7;
+      }
+
+      &.button {
+        color: #fff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 670px) {
+    display: flex;
   }
 `;

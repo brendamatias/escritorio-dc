@@ -12,7 +12,6 @@ function IndexPage() {
   return (
     <main>
       <GlobalStyle />
-
       <Home />
       <About />
       <Contact />
@@ -25,4 +24,4 @@ function IndexPage() {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>Escritório DC</title>;

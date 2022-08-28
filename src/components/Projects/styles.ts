@@ -10,6 +10,7 @@ export const Container = styled.div`
 
   > .title {
     max-width: 975px;
+    padding: 0 20px;
     margin: 0 auto;
 
     > span {
@@ -32,6 +33,10 @@ export const Container = styled.div`
       color: #141414;
       margin-bottom: 40px;
       max-width: 500px;
+
+      @media screen and (max-width: 450px) {
+        font-size: 36px;
+      }
     }
   }
 
