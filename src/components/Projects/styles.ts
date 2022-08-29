@@ -1,5 +1,8 @@
 import styled from 'styled-components';
-import background from '../../images/about-image.jpg';
+
+type ProjectItemProps = {
+  backgroundImage: string;
+};
 
 export const Container = styled.div`
   padding: 120px 0;
@@ -43,10 +46,14 @@ export const Container = styled.div`
   > ul {
     display: flex;
     gap: 30px;
-    margin: 0 20px;
+    margin: 0 auto;
+    width: 1506px;
     overflow-x: auto;
 
-    overflow-x: auto;
+    @media screen and (max-width: 1505px) {
+      width: calc(100% - 40px);
+      margin: 0 20px;
+    }
 
     &:hover::-webkit-scrollbar-thumb {
       background: #178cd7;
@@ -68,49 +75,51 @@ export const Container = styled.div`
     ::-webkit-scrollbar-thumb:hover {
       background: #178cd7;
     }
+  }
+`;
 
-    > li {
-      > div {
-        background-image: url(${background});
-        background-position: center;
-        width: 354px;
-        height: 500px;
-        position: relative;
+export const ProjectItem = styled.li<ProjectItemProps>`
+  > div {
+    background-image: url(${(props) => props.backgroundImage});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 354px;
+    height: 500px;
+    position: relative;
 
-        > div:first-child {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            0deg,
-            #1e3240 -7.9%,
-            rgba(66, 77, 121, 0) 40.4%
-          );
-        }
+    > div:first-child {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        0deg,
+        #1e3240 -7.9%,
+        rgba(66, 77, 121, 0) 40.4%
+      );
+    }
 
-        > .content {
-          display: flex;
-          justify-content: flex-end;
-          flex-direction: column;
-          gap: 4px;
-          height: 100%;
-          padding: 40px 60px;
-          position: absolute;
+    > .content {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      gap: 4px;
+      height: 100%;
+      padding: 40px 60px;
+      position: absolute;
 
-          > strong {
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 36px;
-            color: #ffffff;
-          }
+      > strong {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: #ffffff;
+      }
 
-          > span {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 20px;
-            color: #ffffff;
-          }
-        }
+      > span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 20px;
+        color: #ffffff;
       }
     }
   }

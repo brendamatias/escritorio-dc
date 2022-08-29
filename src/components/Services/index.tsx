@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Container } from './styles';
-import aboutSrc from '../../images/about-image.jpg';
+import aboutSrc from '../../images/about-image.jpeg';
 
 function Services() {
   const services = [
     {
-      label: 'Projetos',
+      label: 'Arquitetura e Urbanismo',
       description:
-        'Projetos Estruturais, Arquitetônicos, Elétricos e Hidráulicos e Projetos em BIM',
+        'Ênfase em elaboração de planos e projetos associados à arquitetura em todas as suas etapas, definindo materiais, acabamentos, técnicas, analisando dados e informações. Fiscalizar e executar obras e serviços, prestar serviços de consultoria e assessoramento, bem como estabelecer políticas de gestão.',
     },
     {
       label: 'Reformas',
