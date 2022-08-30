@@ -30,7 +30,7 @@ export const Container = styled.div`
       line-height: 175%;
       letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: #178cd7;
+      color: #178;
     }
 
     > h1 {

@@ -19,7 +19,7 @@ export const Container = styled.div`
       line-height: 175%;
       letter-spacing: 0.4em;
       text-transform: uppercase;
-      color: #178cd7;
+      color: #178;
     }
 
     > h1 {
@@ -64,7 +64,7 @@ export const Container = styled.div`
           font-weight: 700;
           font-size: 30px;
           line-height: 114%;
-          color: #178cd7;
+          color: #178;
           margin: 20px 0 15px 0;
         }
 

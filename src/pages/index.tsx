@@ -1,3 +1,5 @@
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 import * as React from 'react';
 import type { HeadFC } from 'gatsby';
 import GlobalStyle from '../styles/global';
@@ -8,17 +10,21 @@ import Services from '../components/Services';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
 
+const queryClient = new QueryClient();
+
 function IndexPage() {
   return (
-    <main>
-      <GlobalStyle />
-      <Home />
-      <About />
-      <Contact />
-      <Services />
-      <Projects />
-      <Footer />
-    </main>
+    <QueryClientProvider client={queryClient}>
+      <main>
+        <GlobalStyle />
+        <Home />
+        <About />
+        <Contact />
+        <Services />
+        <Projects />
+        <Footer />
+      </main>
+    </QueryClientProvider>
   );
 }
 

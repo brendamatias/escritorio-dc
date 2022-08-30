@@ -26,7 +26,7 @@ export const Container = styled.header`
         line-height: 175%;
         letter-spacing: 0.4em;
         text-transform: uppercase;
-        color: #178cd7;
+        color: #178;
         margin-bottom: 24px;
 
         @media screen and (max-width: 450px) {
@@ -102,7 +102,7 @@ export const Menu = styled.div`
         color: #fff;
 
         &:hover {
-          color: #178cd7;
+          color: #178;
         }
       }
     }
@@ -136,7 +136,7 @@ export const MenuMobile = styled.ul`
       color: rgba(0, 0, 0, 0.8);
 
       &:hover {
-        color: #178cd7;
+        color: #178;
       }
 
       &.button {
