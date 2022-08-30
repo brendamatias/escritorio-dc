@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type ProjectListProps = {
+  translateX: number;
+};
+
 type ProjectItemProps = {
   backgroundImage: string;
 };
@@ -7,75 +11,86 @@ type ProjectItemProps = {
 export const Container = styled.div`
   padding: 120px 0;
 
-  > img {
-    width: 100%;
-  }
-
-  > .title {
+  > div {
     max-width: 975px;
     padding: 0 20px;
     margin: 0 auto;
 
-    > span {
-      display: block;
-      margin-bottom: 24px;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 175%;
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      color: #178cd7;
+    > img {
+      width: 100%;
     }
 
-    > h1 {
-      letter-spacing: 0.04em;
-      text-transform: capitalize;
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 152.5%;
-      color: #141414;
+    > .title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
       margin-bottom: 40px;
-      max-width: 500px;
 
-      @media screen and (max-width: 450px) {
-        font-size: 36px;
+      > div:first-child {
+        > span {
+          display: block;
+          margin-bottom: 24px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 175%;
+          letter-spacing: 0.4em;
+          text-transform: uppercase;
+          color: #178;
+        }
+
+        > h1 {
+          letter-spacing: 0.04em;
+          text-transform: capitalize;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 152.5%;
+          color: #141414;
+          max-width: 500px;
+
+          @media screen and (max-width: 450px) {
+            font-size: 36px;
+          }
+        }
+      }
+
+      > div:last-child {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        gap: 30px;
+
+        > button {
+          border: 0;
+          background-color: #178;
+          width: 50px;
+          height: 50px;
+
+          &:disabled {
+            opacity: 0.5;
+          }
+
+          > svg {
+            font-size: 20px;
+            color: #fff;
+          }
+        }
       }
     }
-  }
 
-  > ul {
-    display: flex;
-    gap: 30px;
-    margin: 0 auto;
-    width: 1506px;
-    overflow-x: auto;
-
-    @media screen and (max-width: 1505px) {
-      width: calc(100% - 40px);
-      margin: 0 20px;
-    }
-
-    &:hover::-webkit-scrollbar-thumb {
-      background: #178cd7;
-    }
-
-    ::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: transparent;
-      border-radius: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #178cd7;
+    > .projects {
+      transition: transform 0.2s;
+      overflow: hidden;
     }
   }
+`;
+
+export const ProjectList = styled.ul<ProjectListProps>`
+  display: flex;
+  gap: 30px;
+  transform: translateX(${({ translateX }) => `${translateX}px`});
+  transition: transform 0.2s;
 `;
 
 export const ProjectItem = styled.li<ProjectItemProps>`

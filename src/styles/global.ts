@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
   .button {
     color: #fff;
     padding: 8px 32px;
-    background: #178cd7;
+    background: #178;
     font-weight: 600;
   }
 `;
